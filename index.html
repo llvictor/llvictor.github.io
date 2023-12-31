@@ -31,7 +31,15 @@
         text-align: center;
       }
 
+      table tbody tr td:nth-child(1) {
+        font-weight: bold;
+      }
+
       table tbody tr td:nth-child(2) {
+        color: #363636;
+      }
+
+      table tbody tr td:nth-child(3) {
         color: blue;
       }
 
@@ -59,12 +67,23 @@
         font-weight: bold;
         font-size: 32px;
       }
+
+      .entry-number {
+      }
     </style>
   </head>
   <body>
     <div id="box">
       <form id="form">
         <input type="text" name="entry" />
+        <input type="checkbox" value="1" name="id" /> 1
+        <input type="checkbox" value="2" name="id" /> 2
+        <input type="checkbox" value="3" name="id" /> 3
+        <input
+          type="button"
+          value="Limpar"
+          onClick="window.location.reload()"
+        />
         <button type="button" onclick="sendForm()">Verificar</button>
       </form>
       <div id="box-result">
@@ -75,6 +94,7 @@
         <table id="results">
           <thead>
             <tr>
+              <th>Nº</th>
               <th>Jogo</th>
               <th>Acertos</th>
             </tr>
